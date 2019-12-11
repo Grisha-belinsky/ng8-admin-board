@@ -1,0 +1,35 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light main-nav" *ngIf="currentUser">
+    <a class="navbar-brand" routerLink="/">Logo Here</a>
+    <div class="collapse navbar-collapse" id="navbarColor01"></div>
+    <button class="btn btn-secondary my-2 my-sm-0" (click)="logout()">Logout</button>
+</nav>
+
+<!-- Side Bar-->
+<div class="sidebar-left" *ngIf="currentUser">
+    <ul class="navigation-left">
+        <li routerLink="/" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">
+            <div class="nav-item-hold">
+                <a  class="nav-text">Dashboard V1</a>
+            </div>
+        </li>
+        <li routerLink="/v1" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">
+            <div class="nav-item-hold">
+                <a class="nav-text">Dashboard V2</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- main app container -->
+<alert></alert>
+<router-outlet></router-outlet>
+
+<!-- credits -->
+<div class="text-center">
+    <p>
+        <a href="#" target="_top">Angular 8 - User Registration and Login</a>
+    </p>
+</div>
